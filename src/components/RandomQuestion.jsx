@@ -76,7 +76,7 @@ export default function RandomQuestion() {
   };
 
   return (
-    <div className="flex flex-col w-full min-h-dvh h-full m-auto justify-center items-center">
+    <div className="flex flex-col w-full min-h-screen m-auto justify-center items-center">
       <h1 className="text-4xl font-semibold flex justify-center bg-gradient-to-t from-slate-50 to-slate-500 bg-clip-text text-transparent mb-22">
         Take one minute
       </h1>
