@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import questions from '../questions.json';
+import christmas from '../christmas.json'
 
 export default function RandomQuestion() {
   const [gotQuestion, setGotQuestion] = useState(false);
@@ -47,9 +48,19 @@ export default function RandomQuestion() {
     }
   }, [time, stopwatch, checkbox, shouldRestart]);
 
-  const handleSelectQuestion = () => {
+  //normal questions
+  /*const handleSelectQuestion = () => {
     let numberQuestion = Math.floor(Math.random() * (349 - 0));
     let questionSelected = questions[numberQuestion].question;
+    setQuestion(questionSelected.toString());
+    setGotQuestion(true);
+    handleReset();
+    setShouldRestart(true);
+  };*/
+
+  const handleSelectQuestion = () => {
+    let numberQuestion = Math.floor(Math.random() * (59 - 0));
+    let questionSelected = christmas[numberQuestion].question;
     setQuestion(questionSelected.toString());
     setGotQuestion(true);
     handleReset();
@@ -92,7 +103,7 @@ export default function RandomQuestion() {
             Get a random question
           </button>
           <p className="text-gray-500 text-sm mt-1 animate-pulse">
-            *More than 300 questions
+            *More than 50 questions
           </p>
         </div>
         <div className="flex flex-col justify-center items-center sm:mt-2 md:mx-10 w-1/2">
